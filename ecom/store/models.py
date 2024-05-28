@@ -23,7 +23,6 @@ class Customer(models.Model):
     
 class Product(models.Model):
     name=models.CharField(max_length=159)
-    age=models.IntegerField(null=True, blank=True)
     price=models.DecimalField(max_digits=7, default=0,decimal_places=2,)
     category=models.ForeignKey(Category,on_delete=models.CASCADE,default=1)
     description=models.CharField(max_length=250,blank=True,null=True)
